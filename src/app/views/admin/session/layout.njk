@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% include "../parts/styles.njk"%}
+
+    {% block head %}
+      <title>Foodfy</title>
+    {% endblock %}  
+  </head>
+
+  <body>
+    <header class="session-header">
+      <a href="/"><img src="/assets/logo_black.png" alt="foodfy"></a>
+    </header>
+
+    {% block content%}{% endblock %}
+
+    {% include "../parts/messages.njk" %}
+
+    <script src="/scripts/admin/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+.content {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0px auto 50px;
+  width: 100%;
+  max-width: 940px;
+}
+
+.cards.chefs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 30px;
+  justify-content: center;
+
+  margin: 0px auto;
+  width: 100%;
+  max-width: 940px;
+}
+
+.card-admin {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "img name"
+                       "img view"
+  ;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.card-admin img {
+  grid-area: img;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-admin h3 {
+  grid-area: name;
+
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--body-color);
+}
+
+.card-admin a {
+  grid-area: view;
+
+  font-size: 14px;
+  font-weight: bold;
+  color:var(--button-color);
+  cursor: pointer;
+}
+
+.card-admin p {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* Chef */
+
+.card-admin.chefs img {
+  cursor: pointer
+}
+
+.image__container.chef{
+  margin: 50px auto;
+}
+
+.image__container.chef img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+
+  object-fit: cover;
+}
+
+.ingredients__container {
+  margin-bottom: 39px;
+}
+
+.cards.recipes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  justify-content: center;
+
+  margin: 0px auto 50px;
+  width: 100%;
+  max-width: 940px;
+}
+
+.cards.recipes .card-admin {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "img name"
+                       "img chef"
+                       "img view"
+  ;
+  column-gap: 20px;
+}
+
+.cards.recipes .card-admin img {
+  grid-area: img;
+  width: 172px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.cards.recipes .card-admin h3 {
+  grid-area: name;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--body-color);
+  margin-bottom: 0;
+}
+
+.cards.recipes .card-admin p {
+  grid-area: chef;
+  font-size: 14px;
+  color:var(--p-color);
+}
+
+.cards.recipes .card-admin a {
+  grid-area: view;
+  font-size: 14px;
+  font-weight: bold;
+  color: pink;
+  cursor: pointer;
+}
+

@@ -1,0 +1,13 @@
+{% macro searchField (entity, target) %}
+
+  <form action="/{{ entity }}" method="get">
+    <input 
+      type="text" 
+      name="filter" 
+      value="{{ target }}" 
+      placeholder="Search for:"
+    >
+    <button type="submit">Search</button>
+  </form>
+  
+{% endmacro %}

@@ -1,0 +1,21 @@
+{% extends "admin/layout.njk" %}
+{% import "admin/parts/search.njk" as field %}
+
+{% block head %}
+  <title>Recipes - Admin</title>
+{% endblock %}
+
+{% block search %}
+  {{ field.searchField("admin/recipes/search", search.term)}}
+{% endblock %}
+
+{% block content%}
+
+  <div class="topic">
+    <h2>Manage Recipes {% if filter %} - Searching for: "{{ filter }}" {% endif %}</h2>
+    <a href="/admin/recipes/create" class="button">New</a>
+  </div>
+
+  {% include "admin/parts/recipe_cards.njk" %}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'admin/layout.njk' %}
+{% import "admin/parts/search.njk" as field %}
+
+{% block head %}
+  <title>Users - Admin</title>
+{% endblock %}
+
+{% block search %}
+  {{ field.searchField("admin/users/search", search.term)}}
+{% endblock %}
+
+{% block content%}
+
+  <div class="topic">
+    <h2>Users {% if filter %} - Searching for: "{{ filter }}" {% endif %}</h2>
+
+    {% if session.isAdmin %}
+      <a href="/admin/users/register" class="button">New</a>
+    {% endif %}
+  </div>
+
+  <div class='cards users'>
+    {% for user in users %}
+      <div class='card-admin'>
+        <h3 class='name'>{{user.name}}</h3>
+        <p class="email">{{user.email}}</p>
+
+        {% if session.isAdmin %}
+          <div class="buttons">
+            <a class="user edit" href="/admin/users/{{user.id}}/edit">Edit</a>
+            {% if session.isAdmin == user.is_admin%}
+            {% else %}
+              <form class="users" id="form-delete" action="/admin/users?_method=DELETE" method="post">
+                <input type="hidden" name="id" value={{user.id}}>
+                <button type="submit" class="user delete">Remove</button>
+              </form>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

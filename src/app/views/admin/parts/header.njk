@@ -1,0 +1,21 @@
+<div class="container-header">
+  <header class="header">
+    <a href="/"><img src="/assets/logo_white.png" alt="foodfy"></a>
+    <nav>
+      <ul class="menu">
+        <li><a href="/admin/recipes">RECIPES</a></li>
+        <li><a href="/admin/chefs">CHEFS</a></li>
+        {% if session.isAdmin %}
+          <li><a href="/admin/users">USERS</a></li>
+        {% endif %}
+        <li><a href="/admin/profile">ACCOUNT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="exit">
+    <form action="/admin/logout" method="post">
+      <button>LOGOUT</button>
+    </form>
+  </div>
+</div> 

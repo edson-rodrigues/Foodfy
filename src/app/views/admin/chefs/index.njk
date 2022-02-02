@@ -1,0 +1,35 @@
+{% extends 'admin/layout.njk' %}
+{% import "admin/parts/search.njk" as field %}
+
+{% block head %}
+  <title>Chefs - Admin</title>
+{% endblock %}
+
+{% block search %}
+  {{ field.searchField("admin/chefs/search", search.term)}}
+{% endblock %}
+
+{% block content%}
+
+  <div class="topic">
+    {% if session.isAdmin %}
+      <h2>Manage Chefs {% if filter %} - Searching for: "{{ filter }}" {% endif %}</h2>
+
+      <a href="/admin/chefs/create" class="button">New</a>
+    
+    {% else %}
+      <h2>Chefs:</h2>
+    {% endif %}
+  </div>
+
+  <div class='cards chefs'>
+    {% for chef in chefs %}
+      <div class='card-admin'>
+        <img src='{{chef.avatar}}' alt='Imagem de {{chef.name}}'>
+        <h3 class='name'>{{chef.name}}</h3>
+        <a href="/admin/chefs/{{chef.id}}">Visualize</a>
+      </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

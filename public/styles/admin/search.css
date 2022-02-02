@@ -1,0 +1,28 @@
+.search-field {
+  position: absolute;
+  right: 485px;
+  top: 30px;
+}
+
+.search-field form {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  align-items: center;
+}
+
+.search-field input {
+  width: 245px;
+
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 6px 8px;
+
+  font-size: 14px;
+}
+
+.search-field button {
+  padding: 6px 20px;
+
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

@@ -1,0 +1,62 @@
+/* create user */
+
+.user.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 40px;
+}
+
+.user.details .admin-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.user.details .admin-checkbox input {
+  margin: 0;
+  margin-right: 10px;
+
+  width: 15px;
+  height: 15px;
+}
+
+.user.details .admin-checkbox label {
+  font-size: 16px;
+  color: #111111;
+
+  font-weight: bold;
+}
+
+/* list users */
+
+.cards.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  row-gap: 52px;
+  column-gap: 180px;
+
+  margin: 0px auto;
+  width: 100%;
+  max-width: 940px;
+}
+
+.cards.users .card-admin {
+  display: grid;
+  row-gap: 4px;
+}
+
+.cards.users .card-admin h3 {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--body-color);
+}
+
+.cards.users .card-admin p {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--p-color);
+}
+
+.cards.users .card-admin form.users {
+  display: inline;
+}

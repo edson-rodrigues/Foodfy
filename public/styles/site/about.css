@@ -1,0 +1,21 @@
+article {
+  width: 100%;
+  max-width: 940px;
+
+  margin: 0px auto 50px;
+}
+
+article h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--body-color);
+
+  margin-bottom: 10px;
+}
+
+article p {
+  color: #444444;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
