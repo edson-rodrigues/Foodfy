@@ -1,15 +1,15 @@
-## :interrobang: Foodfy
+## Foodfy
 
 Repositório do desafio final do Bootcamp Launchbase.
 <br>
-## :construction_worker: Como subir em desenvolvimento
+##Como subir em desenvolvimento
 
 Para clonar e executar essa aplicação você vai precisar dos seguintes softwares instalados em seu computador: 
 - [Git][git]
 - [Node][nodejs]
 - [PostgreSQL][postgresql] (Versão 12.9!)
 
-### :electric_plug: Instalar dependências
+### Instalar dependências
 
 ```bash
 # Clonar este repositório:
