@@ -5,9 +5,9 @@ Repositório do desafio final do Bootcamp Launchbase.
 ##Como subir em desenvolvimento
 
 Para clonar e executar essa aplicação você vai precisar dos seguintes softwares instalados em seu computador: 
-- [Git][git]
-- [Node][nodejs]
-- [PostgreSQL][postgresql] (Versão 12.9!)
+- Git
+- Node
+- PostgreSQL(Versão 12.9!)
 
 ### Instalar dependências
 
