@@ -24,25 +24,8 @@ $ npm install
 
 ### Configuração do Banco de Dados
 
-Além do [PostgreSQL], instale o [Postbird][postbird] para gerenciamento e visualização do BD numa interface gráfica. <br>
+Além do PostgreSQL, instale o Postbird, para gerenciamento e visualização do BD numa interface gráfica. <br>
 Após essas instalações, ligue o PostgreSQL.
-
-#### Windows:
-
-1. Abra o Powershell como administrador, e navegue até a pasta de instalação:
-```bash
-$ cd "C:\Program Files\PostgreSQL\13\bin\"
-```
-
-2. Inicie o postgres com o comando abaixo:
-```bash
-$ .\pg_ctl.exe -D "C:\Program Files\PostgreSQL\13\data" start
-```
-
-3. Após o uso, o comando para desligá-lo é:
-```bash
-$ .\pg_ctl.exe -D "C:\Program Files\PostgreSQL\13\data" stop
-```
 
 ### Criando a base no Postbird
 
